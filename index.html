@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>首页</title>
+		<script>
+			var flag = 0;
+			var chendu1 = 100;
+			var t_1;
+			var num1 = -80;
+			var num2 = 800;
+			var chendu2 = 100;
+			var t_2;
+//			function change1(){//信封头渐变效果
+//				var map1 = document.getElementById("first");
+//				map1.style.top = num1 + "px";
+//				num1--;
+//				map1.style.opacity = chendu1 + "%";
+//				chendu1-=2;
+//				t_1 = window.requestAnimationFrame(change1);
+//				var map2 = document.getElementById("second");
+//				map2.style.top = num2 + "px";
+//				num2++;
+//				map2.style.opacity = chendu2 + "%";
+//				chendu2-=2;
+//				if(chendu1<=0){
+//					document.getElementById("main").removeChild(map1);
+//					document.getElementById("main").removeChild(map2);
+//					window.cancelAnimationFrame(t_1);
+//					
+//				}	
+//			}
+//			function turn(){
+//				window.location.href = "index-guide1.html";
+//			}
+			function change1(){
+				var x1 = document.getElementById("first");
+
+				var x2 = document.getElementById("second");
+
+				x2.style.opacity =  "0";
+				x1.style.top = "-30%";
+				x1.style.opacity = "0";
+				document.getElementById("img1").style.opacity = "1";
+				document.getElementById("img2").style.opacity = "1";
+				document.getElementById("img3").style.opacity = "1";
+			}
+		</script>
+		<style>
+			
+			.choice{
+				position: absolute;
+				width: 20%;
+				height: 30%;
+				margin: 0px;
+				border: 0px;
+				opacity: 0;
+			}			
+			#img1{
+				top: 30%;
+				left:10%;
+				transition: all ease 2s 1.5s; 
+			}
+			#img2{
+				top: 30%;
+				left: 40%;
+				transition: all ease 2s 1.5s; 
+			}
+			#img3{
+				top: 30%;
+				left: 70%;
+				transition: all ease 2s 1.5s; 
+			}
+			#main {		
+				position: relative;		
+				width: 100%;
+				height: 100%;
+				min-width: auto;
+				min-height: auto;					 
+				background-image: url("res/资源 13.png");
+				background-repeat:no-repeat;
+				background-size:contain;
+				background-position: center;				
+				padding: 0px 0px;
+				top: 10px;
+			}
+			.xinfeng1{
+				position:absolute;	
+				background:url("res/资源 17.png");
+				background-size: contain;
+				width: 100%;
+				height: 45%;
+				top:-10%;
+				background-repeat:no-repeat;
+				transition: all ease 3s;
+			}			
+			.xinfeng2{
+				position:absolute;	
+				background:url("res/资源 14.png");
+				background-size: contain;
+				width: 100%;
+				height:60%;
+				top: 60%;
+				background-repeat:no-repeat;
+				transition: all ease 3s;
+			}
+			.tiao{
+				position: absolute;
+				top: 20%;
+				left: 40%;
+				color:black;
+				text-align: center;	
+				z-index: 10;
+				font-family: "微软雅黑";
+				font-size: 30px;
+				text-decoration: none;
+				z-index: 12;
+			}
+			.flex-item {
+    		width: 50%;
+    		height: 50%;
+    		margin: 10px;
+			}
+			.flex-container {
+			position: relative;
+    		display: -webkit-flex;
+    		display: flex;
+    		width: 50%;
+    		height: 10%;
+    		top:30%;
+    		left: 25%;
+			}
+
+			/* @keyframes bubble{
+				0%{
+					opacity: 0;
+				}
+				25%{
+					opacity: 0.25;
+				}
+				50%{
+					opacity: 0.5;
+				}
+				75%{
+					opacity: 0.75;
+				}
+				100%{
+					opacity: 1;
+				}
+			} */
+
+			/*.animation{
+				top:-30%;
+				opacity: 0;
+			}
+			.animation1{
+				top:80%;
+				opacity: 0;
+			}
+
+			*/
+
+			
+		</style>
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	</head>
+
+	<body>
+		
+		<div id="main" class="main">
+			<div id = "first" class="xinfeng1" onmousedown="change1()"></div>
+			<div class="xinfeng2" id = "second"></div>
+		</div>
+		<a href="index-guide1.html"><img class="choice" id = "img1" src="res/50.png"></a>
+		<a href="index-map.html"><img class="choice" id = "img2" src="res/51.png"></a>
+		<a href="index-text1.html"><img class="choice" id = "img3" src="res/52.png"></a>
+	</body>
+</html>
+
+<script>
+	// var top =  document.getElementById('first')
+	// var timer = setInterval(function(){
+	// 	top.style.opacity-=
+	// },16)
+</script>

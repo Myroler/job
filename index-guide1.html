@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>简介(contain)</title>
+		<style>
+			#main {		
+				position: relative;				
+				width: 100%;
+				height: 100%;
+				min-height: 1080px;
+				min-width: 1920px;
+				background-image: url("res/资源 13.png");
+				background-repeat:no-repeat;
+				background-size:contain;
+				background-position: center;
+			}
+			.xuhua{
+				position: absolute;
+				width: 100%;
+				height: 114%;
+				background-image: url("res/背景虚化.png");
+				background-repeat: no-repeat;
+				background-size: contain;
+				left: -2.4%;
+				top: -7.1%;
+			}
+			p{
+				font-size:45px;
+				font-family: "宋体";
+				font-style: italic;
+				color: darkgoldenrod;
+			}
+			#ww1{
+				position:absolute;
+				top: 5%;
+				left: 0%;
+				-webkit-transition:all ease 1s;
+			}
+			#ww2{
+				top: 15%;
+				position: absolute;
+				left: -20%;
+				-webkit-transition: all ease 1s ;
+			}
+			#ww3{
+				top: 40%;
+				position: absolute;
+				left: -4%;
+				-webkit-transition: all ease 1s ;
+			}
+			#ww4{
+				top: 60%;
+				position:absolute;
+				left: -7%;
+				-webkit-transition: all ease 1s ;
+			}
+			#ww5{
+				top: 80%;
+				position: absolute;
+				left: -24%;
+				-webkit-transition: all ease 1s ;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			#inform{
+				top: 15%;
+				position: absolute;
+				width: 40%;
+				height: 80%;
+				left: 55%;
+				z-index: 20;
+				font-family: arial;
+				font-size: 45px;
+				color: beige;
+			}
+			#back{
+				position: absolute;
+				top: 2%;
+				left: 90%;
+				height: 20px;
+				width: 40px;
+				z-index: 100;
+				/*background-repeat:no-repeat ;
+				background-image:url("res/close_btn.png");*/
+			}
+		</style>
+		<script>
+			
+			window.onload = function(){
+				document.getElementById("ww1").style.left  = "31%";
+				document.getElementById("ww2").style.left  = "8%";
+				document.getElementById("ww3").style.left  = "28%";
+				document.getElementById("ww4").style.left  = "25%";
+				document.getElementById("ww5").style.left  = "3%";
+				
+			}
+			function bigger1(e){
+				e.style.fontSize= "50px";
+				document.getElementById("inform").innerHTML = "国际消费品展 包括出口商品展、内外贸一体化展、进口商品海淘汇,展示全球特色商品和中国出口消费品。";
+			}
+			function bigger2(e){
+				e.style.fontSize= "50px";
+				document.getElementById("inform").innerHTML = "第二届中国—中东欧国家博览会暨国际消费品博览会，是领导人峰会后首场国家级的中东欧合作重大活动，是贯彻落实总书记讲话精神的重要载体，是展现宁波“重要窗口”建设成就的重大平台。第二届中国—中东欧国家博览会暨国际消费品博览会拟于今年6月8日至11日举办，以“构建新格局、共享新机遇”为主题，共安排会议论坛、展览展示、经贸洽谈、人文交流、主宾国和主宾省活动等重要活动。";
+			}
+			function bigger3(e){
+				e.style.fontSize= "50px";
+				document.getElementById("inform").innerHTML ="进口商品常年展 常年展示和交易中东欧国家及其他国家进口商品。";
+				
+			}
+			function bigger4(e){
+				e.style.fontSize= "50px";
+				document.getElementById("inform").innerHTML ="中东欧展 包括中国—中东欧国家合作成果展和中东欧商品展(按国别和专业组展),展示中东欧国家, 部分欧洲国家特色商品，展示中国与中东欧国家合作成果。";
+			}
+			function bigger5(e){
+				e.style.fontSize= "50px";
+				document.getElementById("inform").innerHTML ="2016中国—中东欧国家投资贸易博览会（简称中东欧博览会）顺应“一带一路”和长江经济带发展战略，以《中国-中东欧国家合作苏州纲要》为指导，以“深化合作、互利共赢”为主题，通过举办会议论坛、投资洽谈、贸易展览、人文交流等系列活动，进一步打造中国与中东欧国家全面合作和“一带一路”建设的重要平台，为我国经贸事业发展作出新的贡献。";
+			}
+			function back(e){
+				e.style.fontSize = "45px";
+			}
+		</script>
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	</head>
+	<body>
+		<div id="main">
+    			<div class="xuhua"></div>
+    			<p class="w1" id="ww1" onmouseover="bigger1(this)" onmouseout="back(this)">国际消费品展</p>
+    			<p class="w2" id="ww2" onmouseover="bigger2(this)" onmouseout="back(this)" ><br>中国-中东欧国家博览会暨国际<br>博览会消费品展</p>
+    			<p class="w3"  id="ww3" onmouseover="bigger3(this)" onmouseout="back(this)" >进口商品展</p>
+    			<p class="w4" id="ww4" onmouseover="bigger4(this)" onmouseout="back(this)" >中东欧展</p>
+    			<p class="w5" id="ww5" onmouseover="bigger5(this)" onmouseout="back(this)" >中东欧博览会往届主题</p>
+    			<div id="inform"></div>
+		</div>
+		<a href="index.html"><div id = "back">返回</div></a>
+	</body>
+</html>
